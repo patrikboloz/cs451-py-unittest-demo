@@ -24,7 +24,9 @@ class BabySet:
 		"""Add element elem to the set only if it is 
 		unique to the set."""
 
-		self.__data.append(elem)
+		if elem not in self.__data:
+			self.__data.append(elem)
+
 
 	def addSeq(self, seq):
 		"""Add contents of seq to the set where each item in contents 
